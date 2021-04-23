@@ -5,4 +5,6 @@ const userCtrl = require('../controllers/user.contoller');
 
 router.post('/', userCtrl.registerUser);
 
+router.get('/:userID', userCtrl.getUserByID);
+
 module.exports = router;

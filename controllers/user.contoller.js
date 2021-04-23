@@ -17,4 +17,12 @@ userCtrl.registerUser = async (req,res) =>{
     })
 }
 
+userCtrl.getUserByID = async (req,res) => {
+    User.findById(req.params.userID).then(data => {
+        res.json(data);
+    }).catch(err => {
+        res.json({message: "User does not exist"});
+    })
+}
+
 module.exports = userCtrl;
