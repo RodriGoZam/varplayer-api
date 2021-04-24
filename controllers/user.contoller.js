@@ -17,6 +17,12 @@ userCtrl.registerUser = async (req,res) =>{
     })
 }
 
+
+userCtrl.getAllUsers = async (req,res ) => {
+    const users = await User.find()
+    res.json(users)
+}
+
 userCtrl.getUserByID = async (req,res) => {
     User.findById(req.params.userID).then(data => {
         res.json(data);
