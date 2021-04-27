@@ -18,4 +18,10 @@ movieCtrl.registerMovie = async (req,res) => {
     })
 }
 
+movieCtrl.getAllMovies = async (req,res) => {
+    const movies = await Movie.find();
+    res.json(movies);
+}
+
+
 module.exports = movieCtrl;
