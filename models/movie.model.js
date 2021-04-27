@@ -6,6 +6,7 @@ const movieSchema = new Schema({
     releaseDate: {type: Date, required: true},
     description: {type: String, required: true},
     runtime: {type: String, required: true},
+    link: {type: String, required: true},
     timesWatched: {type: Number, required: false}
 })
 
