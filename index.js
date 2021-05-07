@@ -1,9 +1,11 @@
 const express = require('express');
+var cors = require('cors');
 const app = express();
 const bodyParser = require('body-parser');
 require('./database/varplayer.database')
 let port = process.env.PORT || 3000;
 
+app.use(cors());
 app.use(bodyParser.json());
 
 const userRoute = require('./routes/user.route');

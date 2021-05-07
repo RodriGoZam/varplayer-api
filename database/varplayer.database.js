@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 require('dotenv/config');
 
-mongoose.connect("mongodb+srv://admin:admin@clusterdb.rmmie.mongodb.net/varplayerdb?retryWrites=true&w=majority",{ 
+mongoose.connect(process.env.DB_CONNECTION,{ 
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true,
