@@ -7,4 +7,6 @@ router.post('/', movieCtrl.registerMovie);
 
 router.get('/', movieCtrl.getAllMovies);
 
+router.get('/:movieID', movieCtrl.getMovieById);
+
 module.exports = router;

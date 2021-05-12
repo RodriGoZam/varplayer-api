@@ -23,5 +23,13 @@ movieCtrl.getAllMovies = async (req,res) => {
     res.json(movies);
 }
 
+movieCtrl.getMovieById = async (req,res) => {
+    Movie.findById(req.params.movieID).then(data => {
+        res.json(data);
+    }).catch(err => {
+        res.json({message: "Movie does not exist"});
+    })
+}
+
 
 module.exports = movieCtrl;
