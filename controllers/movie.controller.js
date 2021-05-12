@@ -7,8 +7,8 @@ movieCtrl.registerMovie = async (req,res) => {
         releaseDate: new Date(req.body.releaseDate), //Ej: 2019-04-22
         description: req.body.description,
         runtime: req.body.runtime,
-        link: req.body.link,
-        timesWatched: 0 //Es 0 por defecto
+        imgsrc: req.body.imgsrc,
+        link: req.body.link
     })
 
     movie.save().then(data => {
