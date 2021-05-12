@@ -9,4 +9,6 @@ router.get('/', userCtrl.getAllUsers);
 
 router.get('/:userID', userCtrl.getUserByID);
 
+router.delete('/:userID', userCtrl.deleteUser);
+
 module.exports = router;

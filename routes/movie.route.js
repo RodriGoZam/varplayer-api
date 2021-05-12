@@ -9,4 +9,6 @@ router.get('/', movieCtrl.getAllMovies);
 
 router.get('/:movieID', movieCtrl.getMovieById);
 
+router.delete('/:movieID', movieCtrl.deleteMovie);
+
 module.exports = router;

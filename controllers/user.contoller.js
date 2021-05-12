@@ -29,4 +29,12 @@ userCtrl.getUserByID = async (req,res) => {
     })
 }
 
+userCtrl.deleteUser = async (req,res) => {
+    User.findByIdAndDelete(req.params.userID).then(data => {
+        res.json({message: "User has been deleted successfully!"});
+    }).catch(err => {
+        res.json({message: "User does not exist or has been deleted"});
+    })
+}
+
 module.exports = userCtrl;

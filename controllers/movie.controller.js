@@ -31,5 +31,13 @@ movieCtrl.getMovieById = async (req,res) => {
     })
 }
 
+movieCtrl.deleteMovie = async (req,res) => {
+    Movie.findByIdAndDelete(req.params.movieID).then(data => {
+        res.json({message: "Movie has been deleted successfully!"});
+    }).catch(err => {
+        res.json({message: "Movie does not exist or has been deleted"});
+    })
+}
+
 
 module.exports = movieCtrl;
